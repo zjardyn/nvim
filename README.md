@@ -2,4 +2,5 @@
 
 Sane and simple defaults
 
-`git clone zjardyn/nvim ~/.config
+`cp -r ~/.config/nvim ~/.config/nvim.bak`
+`git clone git@github.com:zjardyn/nvim.git`
