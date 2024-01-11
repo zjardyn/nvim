@@ -6,13 +6,6 @@ require'FTerm'.setup({
     },
 })
 
--- Example keybindings
-vim.keymap.set('n', '<M-i>', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', '<M-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
-
-vim.keymap.set('n', '<leader>c', '<CMD>lua require("FTerm").run("cargo run")<CR>')
-vim.keymap.set('n', '<leader>r', '<CMD>lua require("FTerm").run("cargo check")<CR>')
-
 -- require('FTerm').open()
 -- or create a vim command
 vim.api.nvim_create_user_command('FTermOpen', require('FTerm').open, { bang = true })
