@@ -30,9 +30,8 @@ vim.keymap.set("v", "<", "<gv", {silent = true})
 -- Buffer Manipulation 
 vim.keymap.set("n", "gn", vim.cmd.bnext)
 vim.keymap.set("n", "gp", vim.cmd.bprevious)
-vim.keymap.set("n", "<M-S-l", vim.cmd.bnext)
-vim.keymap.set("n", "M-S-h", vim.cmd.bprevious)
 vim.keymap.set("n", "bd", vim.cmd.bdelete)
+
 
 
 
