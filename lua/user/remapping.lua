@@ -1,11 +1,14 @@
+local keymap = vim.keymap.set
+local opts = {noremap = true, silent = true}
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Package Keymappings
-vim.keymap.set("n", "<leader>pv", vim.cmd.NvimTreeToggle)
+keymap("n", "<leader>e", vim.cmd.NvimTreeToggle)
 
 -- Fterm 
-vim.keymap.set('n', '<M-i>', '<CMD>lua require("FTerm").toggle()<CR>')
+keymap('n', '<M-i>', '<CMD>lua require("FTerm").toggle()<CR>')
 vim.keymap.set('t', '<M-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')
 
 vim.keymap.set('n', '<leader>c', function()
@@ -33,5 +36,5 @@ vim.keymap.set("n", "gp", vim.cmd.bprevious)
 vim.keymap.set("n", "bd", vim.cmd.bdelete)
 
 
-
-
+-- vim.keymap.set("x", "p", [["_dP]])
+-- vim.keymap({"n", "x"}, "j", "gj", opts)
