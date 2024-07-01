@@ -20,31 +20,20 @@ vim.opt.rtp:prepend(lazypath)
 -- Other dir to load and configure is ~/.config/nvim/after/plugin
 require('lazy').setup({
   { "numToStr/FTerm.nvim"},
-  { "jalvesaq/Nvim-R", lazy = false,
-    version = "0.9.19"
-  },
+  { "jalvesaq/Nvim-R", lazy = false, version = "0.9.19" },
   { 'mrjones2014/smart-splits.nvim' },
   { 'nvim-lualine/lualine.nvim', },
   { 'numToStr/Comment.nvim', opts = {} },
-  'tpope/vim-sleuth',
-  { 'rose-pine/neovim', name = 'rose-pine',
-    priority = 1000,
+  { 'tpope/vim-sleuth' },
+  { 'rose-pine/neovim', name = 'rose-pine', priority = 1000,
     config = function()
       vim.cmd.colorscheme 'rose-pine'
     end,
   },
-  {
-    'nvim-telescope/telescope.nvim',
-    branch = '0.1.x',
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-      -- Fuzzy Finder Algorithm which requires local dependencies to be built.
-      -- Only load if `make` is available. Make sure you have the system
-      -- requirements installed.
+  { 'nvim-telescope/telescope.nvim', branch = '0.1.x', 
+  dependencies = { 'nvim-lua/plenary.nvim',
       {
         'nvim-telescope/telescope-fzf-native.nvim',
-        -- NOTE: If you are having trouble with this installation,
-        --       refer to the README for telescope-fzf-native for more instructions.
         build = 'make',
         cond = function()
           return vim.fn.executable 'make' == 1
@@ -78,9 +67,7 @@ require('lazy').setup({
     opts = {} -- this is equalent to setup({}) function
   },
   {'nvim-tree/nvim-tree.lua'},
-  {
-    'akinsho/bufferline.nvim',
-    version = "*",
+  { 'akinsho/bufferline.nvim',
     dependencies = 'nvim-tree/nvim-web-devicons',
     config = true
   }
